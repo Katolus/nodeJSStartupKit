@@ -76,3 +76,5 @@ added test:watch to npm scritpts settings to support lunching scripts as part of
 Adding two CI server to make sure our app runs equally on Linux and Windows based environments
 
 Adding Travis configuration by adding .travis.yml 
+
+Adding Appveyor configuration by adding appveyor.yml
