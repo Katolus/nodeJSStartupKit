@@ -34,3 +34,10 @@ TO USE ON npm-Scripts for multiple scripts "npm-run-all --parallel $firstScriptN
 Added Babel configuration.
 Added new not available features from ES6 to startMessage.js
 
+
+***** Webpack - bundling all code into one .js code that is being used ******
+
+bundle.js is a temporary creation files
+
+Using sourceMap can inspect original code in browser
+
