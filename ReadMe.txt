@@ -41,3 +41,25 @@ bundle.js is a temporary creation files
 
 Using sourceMap can inspect original code in browser
 
+***** Linting with ESLint ***********
+
+ESLint recommended variable in configuration file suggest to use recommened set of Linting standards
+
+Creating configuration files with .eslintrc.json
+"rules" configuration:
+example : "no-console": 1
+
+0 - off
+1 - warning
+2 - error
+
+To watch ESLint output we use ES-watch (esw - executable for es watch) package that enables much more functionalities than running ESLint from npm
+
+You can disable eslint checks with a comment /* eslint-disable no-console */ for disabling no-console checks in that file
+Another way to disable es-lint warning is to write in line a comment such as // eslint-disable-line no-console
+
+Adding "lint:watch": "npm run lint -- --watch" to npm scripts variables that runs included there "lint" script with additional --watch variable
+
+Also adding eslint:watch while starting app
+
+

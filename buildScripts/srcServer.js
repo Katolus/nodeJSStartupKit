@@ -4,6 +4,8 @@ import open from 'open';//Dependency that opens links/application with given var
 import webpack from 'webpack';//Adding webpack and webpack config to server configuration
 import config from '../webpack.config.dev';
 
+/* eslint-disable no-console */
+
 const port = 3000;
 const app = express();
 const compiler = webpack(config); // We are using webpack comipler with the configurations we have made
