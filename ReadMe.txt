@@ -62,4 +62,11 @@ Adding "lint:watch": "npm run lint -- --watch" to npm scripts variables that run
 
 Also adding eslint:watch while starting app
 
+***** Unit testing with Mocha ***********
 
+testSetup.js to disable certain not compatible functionalities
+
+"test": "mocha --reporter progress buildScripts/testSetup.js \"src/**/*.test.js\"" to package.json 
+to use a specific reporter (style in which tests are gonna be reporter) and to progress through testSetup.js script first and after following any script that he can find under listed directory and subdirectory ending with .test.js 
+
+added test:watch to npm scritpts settings to support lunching scripts as part of starting the application
