@@ -1,9 +1,9 @@
-var express = require("express"); //Web Server dependency
-var path = require("path"); //Dependency object that helps to relate with paths in project folder
-var open = require("open");//Dependency that opens links/application with given variables
+import express from 'express'; //Web Server dependency
+import path from 'path'; //Dependency object that helps to relate with paths in project folder
+import open from 'open';//Dependency that opens links/application with given variables
 
-var port = 3000;
-var app = express();
+const port = 3000;
+const app = express();
 
 app.get("/", function (req, res) {
   res.sendFile(path.join(__dirname, "../src/index.html"));

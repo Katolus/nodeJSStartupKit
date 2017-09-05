@@ -29,3 +29,8 @@ npm-run-all package to run multiple items at the same time in a cross platform w
 on "start" script we can declare multiple scripts
 TO USE ON npm-Scripts for multiple scripts "npm-run-all --parallel $firstScriptName $otherScriptsNames"
 
+********* Babel - tranpiling ES5 code to standardize Javascript (translating) *********
+
+Added Babel configuration.
+Added new not available features from ES6 to startMessage.js
+
