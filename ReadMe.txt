@@ -78,3 +78,36 @@ Adding two CI server to make sure our app runs equally on Linux and Windows base
 Adding Travis configuration by adding .travis.yml 
 
 Adding Appveyor configuration by adding appveyor.yml
+
+
+***** HTTP Calls *****
+
+Populating main page with mock API request data population
+
+Declare our schema with: 
+
+JSON schema faker 
+
+Generate Random Data:  
+- faker.js
+- chance.js
+- randexp.js
+
+JSON server creates actuall server via API !
+
+mockDataSchema.js to produce a schema for generating mock data
+generateMockData.js to use jsf(JSON schema faker) to generate mock data according to the schema and save it in a file
+"generate-mock-data": "babel-node buildScripts/generateMockData.js" in package.json to add action to npm Scripts
+
+"start-mockapi": "json-server --watch src/api/db.json --port 3001" in package.json to run JSON server to produce a fake API over port 3001 using JSON data create in db.json file
+It will generate a sub path for every properties declared in mockDataSchema. Super Awesome shit! 
+
+Adding "prestart-mockapi": "npm run generate-mock-data" to (along with pre- convention) generate mockData before starting JSON server 
+Add "start-mockapi" to start scripts to generate mock data each time we start an API
+
+We will have different calls depending on env used. In prod we will have different API call than in test
+This is why we create baseUrl.js that tells the application that it sees localhost env as base -> point to mockData local API | but if sees other URL variables point accordingly
+
+Added del function call to userApi.js file + additional logic in index.js
+
+In this module we also added .vscode/launch.json file = for Chrome Debugger purposess.
