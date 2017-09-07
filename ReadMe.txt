@@ -147,3 +147,7 @@ bundle/minify CSS -> add plugin to webpack configuarations
 Error login !!!! -> for example with track.js etc. (payed solution)
 
 Adding env dependence with html-webkpack package (using EJS) with conditional
+
+***** Adding our app to production ********
+Add Surge globally or in npm scripts
+Static content on Surge ! -> create a deployment npm script -> "deploy": "surge ./dist" 
