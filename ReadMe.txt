@@ -111,3 +111,39 @@ This is why we create baseUrl.js that tells the application that it sees localho
 Added del function call to userApi.js file + additional logic in index.js
 
 In this module we also added .vscode/launch.json file = for Chrome Debugger purposess.
+
+**** Adding PROD build scripts ***** 
+
+Adding additional webpack configuration 
+Adding new build.js file to build with prod variables 
+Created new distServer.js configuration for prod server -> adjusted to a new /dist path for PROD 
+
+Adjusted baseUrl.js scripts to use mockApi when a variable is passed 
+
+Adding additional npm scripts for prod:
+"clean-dist": "rimraf ./dist && mkdir dist" -> cleaning /dist 
+"prebuild": "npm-run-all clean-dist test lint" -> this will run cleaning testing and linting of the code before building 
+"build": "babel-node buildScripts/build.js" -> this will run build for prod
+"postbuild": "babel-node buildScripts/distServer.js" -> start our dist server after build is completed
+
+Referencing bundled Assest in HTML
+- hard code
+- manipulate via Node
+- html-webpack-plugin -> allows to use an index.html template declared in webpack configuration and dynamicaly generate that html
+
+Minify code and html ! 
+
+SAVES BANDWITDH ! = Bundle splitting  -> to ensure user can procced to part of the webpack without waiting for the whole bundle file to downloaded 
+
+Use CommonChunkPlugin to create a separate bundle of vendor libraries so that they're cached separately
+
+Cache BUSTING ! 
+
+Send headers with far expiration date -> update when code changes = WebpackMd5Hash package 
+plugin in webpack configuration
+
+bundle/minify CSS -> add plugin to webpack configuarations
+
+Error login !!!! -> for example with track.js etc. (payed solution)
+
+Adding env dependence with html-webkpack package (using EJS) with conditional

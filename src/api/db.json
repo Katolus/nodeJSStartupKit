@@ -1,3 +1,22 @@
 {
-  "users": []
+  "users": [
+    {
+      "id": 12086628,
+      "firstName": "Helga",
+      "lastName": "Lind",
+      "email": "Jena_Dibbert81@hotmail.com"
+    },
+    {
+      "id": 29573376,
+      "firstName": "Savion",
+      "lastName": "Dicki",
+      "email": "Sammie.Schmeler89@hotmail.com"
+    },
+    {
+      "id": 60624232,
+      "firstName": "Edgar",
+      "lastName": "Wisozk",
+      "email": "Alfreda30@yahoo.com"
+    }
+  ]
 }
